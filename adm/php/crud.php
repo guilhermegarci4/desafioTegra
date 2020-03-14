@@ -16,8 +16,55 @@ if($action == 'cadastrarLivro')
     if(isset($_POST['preco']) ?  $preco = $_POST['preco'] : $preco = '');
     if(isset($_POST['qtdEstoque']) ?  $qtdEstoque = $_POST['qtdEstoque'] : $qtdEstoque = '');
 
-    $insertLivro = mysqli_query($con, "INSERT INTO `tbl_livros`(`titulo`, `autor`, `preco`, `qtdEstoque`) 
-                                        VALUES ('$titulo','$autor','$preco', '$qtdEstoque')");
+    if ($_FILES[ 'arquivo' ][ 'name' ] == '' ||  $_FILES[ 'arquivo' ][ 'name' ] == 'NULL' ||  $_FILES[ 'arquivo' ][ 'name' ] == NULL ) {
+        
+        $insertLivro = mysqli_query($con, "INSERT INTO `tbl_livros`(`titulo`, `autor`, `preco`, `qtdEstoque`) 
+        VALUES ('$titulo','$autor','$preco', '$qtdEstoque')");
+        
+        setcookie('msgcookie', 1, time()+2, "/");
+        header('Location: ../livros.php');   
+        exit();
+    }
+    // verifica se foi enviado um arquivo
+    if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] == 0 ) {
+
+        $arquivo_tmp = $_FILES[ 'arquivo' ][ 'tmp_name' ];
+        $nome = $_FILES[ 'arquivo' ][ 'name' ];
+
+        // Pega a extensão
+        $extensao = pathinfo ( $nome, PATHINFO_EXTENSION );
+
+        // Converte a extensão para minúsculo
+        $extensao = strtolower ( $extensao );
+
+        // Somente imagens, .jpg;.jpeg;.gif;.png
+        // Aqui eu enfileiro as extensões permitidas e separo por ';'
+        // Isso serve apenas para eu poder pesquisar dentro desta String
+        if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
+            // Cria um nome único para esta imagem
+            // Evita que duplique as imagens no servidor.
+            // Evita nomes com acentos, espaços e caracteres não alfanuméricos
+            $novoNome = uniqid ( time () ) . '.' . $extensao;
+
+            // Concatena a pasta com o nome
+            $destino = '../uploads/'.$novoNome;
+
+            // tenta mover o arquivo para o destino
+            if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
+                echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
+                echo ' < img src = "' . $destino . '" />';
+            }
+            else
+                echo 'Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
+        }
+        else
+            echo 'Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
+    }
+    else
+        echo 'Você não enviou nenhum arquivo!';
+
+    $insertLivro = mysqli_query($con, "INSERT INTO `tbl_livros`(`titulo`, `autor`, `preco`, `qtdEstoque`, `image`) 
+                                        VALUES ('$titulo','$autor','$preco', '$qtdEstoque', '$novoNome')");
                                         
     setcookie('msgcookie', 1, time()+2, "/");
     header('Location: ../livros.php');   
@@ -87,6 +134,7 @@ if($action == 'editarCupom')
     if(isset($_POST['cupom']) ?  $cupom = $_POST['cupom'] : $cupom = '');
     if(isset($_POST['dataExpCup']) ?  $dataExpCup = $_POST['dataExpCup'] : $dataExpCup = '');
 
+    
      $insertCupom = mysqli_query($con, "UPDATE
                                             `tbl_cupons` 
                                         SET 
@@ -96,8 +144,7 @@ if($action == 'editarCupom')
                                             `cupom` = '$cupom',
                                             `dataExpiracao` = '$dataExpCup'
                                         WHERE id_cupom = $id
-                                        ");
-                     
+                                        ");            
     setcookie('msgcookie', 2, time()+2, "/");
     header("Location: ../cupons_editar.php?id=$id");   
     exit();

@@ -68,6 +68,13 @@ include 'header.php';
       									<input type="number" min=0 name="qtdEstoque" id="qtdEstoque" class="form-control" placeholder="Ex. 50" required> 
       								</div>
       							</div>
+							  </div>
+							  <div class="row">
+      							<div class="col-md-6 mx-auto">
+      							
+									  <label for='selecao-arquivo'>Selecionar um arquivo &#187;</label>
+										<input id='selecao-arquivo' name="arquivo" type='file' required>	
+      							</div>
       						</div>
       						</div><br><br>
 							
@@ -82,6 +89,14 @@ include 'header.php';
       			</div>
       		</div>
       	</div>
-    
+	
+		  <script>
+				var $input    = document.getElementById('input-file'),
+					$fileName = document.getElementById('file-name');
+
+				$input.addEventListener('change', function(){
+				$fileName.textContent = this.value;
+				});
+		</script>
       
       <?php include 'footer.php' ?>

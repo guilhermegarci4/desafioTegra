@@ -35,7 +35,7 @@ include 'header.php'; //header
       <div class="card-header">
 		<h4 class="card-title"> Cupom</h4>
 		<div class="card-body">
-            <h5><a href="cupons_cadastrar.php">Cadastrar cupom</a></h5>
+            <h5><a href="cupons_cadastrar.php"><i class="nc-icon nc-tap-01"></i> Cadastrar cupom</a></h5>
 			<?php  
 				// Mostrar a mensagem na tela, pode colocar essa variavel em qualquer lugar 
 				$msg->display();

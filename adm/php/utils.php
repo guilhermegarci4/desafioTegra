@@ -21,6 +21,17 @@ function Livros(){
     return $resArr;
 }
 
+function LivrosRecomendados(){
+    require("conecta.php"); //Conexão com o banco de dados
+    $selectLivros = mysqli_query($con, "SELECT * FROM tbl_livros ORDER BY id_livro DESC LIMIT 3");
+    $resArr = array(); //create the result array
+ 
+     while($row = mysqli_fetch_assoc($selectLivros)) { //loop the rows returned from db
+         $resArr[] = $row; //add row to array
+     }
+     return $resArr;
+ }
+
 //Return livros $id
 function LivrosEditar($id){
     require("conecta.php"); //Conexão com o banco de dados
