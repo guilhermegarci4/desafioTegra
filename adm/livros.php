@@ -64,7 +64,7 @@ include 'header.php'; //error
               <tr>
                 <td><?php echo $dadosLivros['titulo']?></td>
                 <td><?php echo $dadosLivros['autor']?></td>
-                <td><?php echo $dadosLivros['preco']?></td>
+                <td>R$<?php echo $dadosLivros['preco']?></td>
                 <td><?php echo $dadosLivros['qtdEstoque']?></td>
 				<td style="cursor: hand;">
                     <a href="livros_editar.php?id=<?php echo $id?>" class="botaoedit">

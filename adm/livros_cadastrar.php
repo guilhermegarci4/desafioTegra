@@ -71,7 +71,6 @@ include 'header.php';
 							  </div>
 							  <div class="row">
       							<div class="col-md-6 mx-auto">
-      							
 									  <label for='selecao-arquivo'>Selecionar um arquivo &#187;</label>
 										<input id='selecao-arquivo' name="arquivo" type='file' required>	
       							</div>

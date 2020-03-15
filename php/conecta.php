@@ -12,6 +12,8 @@ $udb="root";				// Usuário do banco de dados (fornecido pelo provedor)
 $senha="";				// Senha de acesso ao mySQL
 $bdados="trabalhenategra";		// Nome do banco de dados que se deseja acessar
 
+//Conexão PDO para fazer a logica do carrinho
+$conexaoPDO = new PDO('mysql:host=localhost;dbname=trabalhenategra',"root","");
 /*
   Define o número de segundos durante os quais é permitido a execução do script. 
   Se este limite é atingido, o script retorna um erro fatal.
@@ -31,6 +33,7 @@ $con = mysqli_connect($servidor,$udb,$senha,$bdados);
 
 // Define a acentuação/tabela de caracteres na origem dos dados
 mysqli_query($con,"SET NAMES utf8");
+
 
 // Caso ocorra um erro, emite uma mensagem de falha
 if (mysqli_connect_errno()) {

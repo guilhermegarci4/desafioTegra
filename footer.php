@@ -9,7 +9,7 @@
 						<div class="single-widget">
 						<div class="companyinfo">
 							<h2><span>TEGRA</span></h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<p>Desenvolvemos soluções digitais sob medida para o seu negócio.</p>
 						</div>
 						</div>
 					</div>
@@ -18,8 +18,8 @@
 						<div class="single-widget">
 							<h2>Sobre a Tegra</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Informações da empresa</a></li>
-								<li><a href="#">Trabalhe conosco</a></li>
+								<li><a href="https://tegra.com.br">Informações da empresa</a></li>
+								<li><a href="https://tegra.com.br/trabalhe-conosco/">Trabalhe conosco</a></li>
 								<li><a href="#">Localização</a></li>
 								<li><a href="#">Direitos</a></li>
 							</ul>
@@ -44,7 +44,7 @@
 			<div class="container">
 				<div class="row">
 					<p class="pull-left">Trabalhe na Tegra © 2020 - Loja de livros. Todos direitos reservados.</p>
-					<p class="pull-right">Criado por <span><a target="_blank" href="">Guilherme Garcia</a></span></p>
+					<p class="pull-right">Criado por <span><a target="_blank" href="https://madebyguilherme.com">Guilherme Garcia</a></span></p>
 				</div>
 			</div>
 		</div>

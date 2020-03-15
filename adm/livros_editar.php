@@ -11,7 +11,8 @@ if($id != '')
 		$titulo = $dadosLivros['titulo'];
         $autor = $dadosLivros['autor'];
         $preco = $dadosLivros['preco'];
-        $qtdEstoque = $dadosLivros['qtdEstoque'];
+		$qtdEstoque = $dadosLivros['qtdEstoque'];
+		$image = $dadosLivros['image'];
 	}
 }
 
@@ -86,11 +87,18 @@ if($id != '')
       								</div>
       							</div>
       						</div>
+							  <div class="row">
+      							<div class="col-md-6 mx-auto">
+									  <label for='selecao-arquivo'>Selecionar um arquivo &#187;</label>
+										<input id='selecao-arquivo' name="arquivo" type='file'>	
+										<img style="width:80px;" src="uploads/<?php echo $image?>" alt="Foto livro">
+      							</div>
+      						</div>
       						</div><br><br>
 							
       						<div class="row">
       							<div class="update ml-auto mr-auto">
-      								<button type="submit" class="btn btn-primary btn-round">Cadastrar</button>
+      								<button type="submit" class="btn btn-primary btn-round">Editar</button>
                                     <a href="livros.php" class="btn btn-primary btn-round">Voltar</a>
       							</div>
       						</div>

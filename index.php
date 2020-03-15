@@ -21,15 +21,15 @@
 										<div class="productinfo text-center">
 											<br>
 											<img style="width: 45%; height: 15em" src="adm/uploads/<?php echo $dadosLivros['image']?>" alt="" />
-											<h2><?php echo $dadosLivros['preco']?></h2>
-											<p><?php echo substr( $dadosLivros['titulo'], 0, 50)."...<br>".$dadosLivros['autor']?></p>
+											<h2>R$<?php echo $dadosLivros['preco']?></h2>
+											<p><?php echo substr( $dadosLivros['titulo'], 0, 49)."...<br>".$dadosLivros['autor']?></p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Comprar</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2><?php echo $dadosLivros['preco']?></h2>
+												<h2>R$<?php echo $dadosLivros['preco']?></h2>
 												<p><?php echo $dadosLivros['titulo']."<br>".$dadosLivros['autor']?></p>
-												<a href="livros-detalhes.php" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Comprar</a>
+												<a href="livros-detalhes.php?id=<?php echo $dadosLivros['id_livro']?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Comprar</a>
 											</div>
 										</div>
 								</div>
@@ -53,9 +53,9 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 												<img style="width:40%" src="adm/uploads/<?php echo $dadosLivros['image']?>" alt="" />
-													<h2><?php echo $dadosLivros['preco']?></h2>
+													<h2>R$<?php echo $dadosLivros['preco']?></h2>
 													<p><?php echo $dadosLivros['titulo']."<br>".$dadosLivros['autor']?></p>
-													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Adicionar ao carrinho</a>
+													<a href="livros-detalhes.php?id=<?php echo $dadosLivros['id_livro']?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Comprar</a>
 												</div>
 												
 											</div>
@@ -76,7 +76,5 @@
 			</div>
 		</div>
 	</section>
-	
-	<!-- FOOTERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR -->
 
 	<?php include 'footer.php '; //footer?>

@@ -4,6 +4,14 @@ include '../php/conecta.php'; //Conexão com o banco de dados
 include 'php/cookieadm.php'; //Segurança por cookie para saber se realmente é o login
 include 'header.php'; //header
 
+$sqlcount1 = mysqli_query($con, "SELECT count(*) as total1 from tbl_livros ");
+$total1=mysqli_fetch_assoc($sqlcount1);
+
+$sqlcount2 = mysqli_query($con, "SELECT count(*) as total2 from tbl_cupons ");
+$total2=mysqli_fetch_assoc($sqlcount2);
+
+$sqlcount3 = mysqli_query($con, "SELECT count(*) as total3 from tbl_pedidos ");
+$total3=mysqli_fetch_assoc($sqlcount3);
 ?>
 <div class="main-panel">
 	<!-- Navbar -->
@@ -31,42 +39,27 @@ include 'header.php'; //header
     <div class="card">
       <div class="card-header">
 		<h4 class="card-title"> Início</h4>
-		<div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="card card-stats">
-                <div class="card-header card-header-success card-header-icon">
-                  <div class="card-icon">
-                    <i class="material-icons">Mudar as cores</i>
-                  </div>
-                  <p class="card-category">Mudar as cores</p>
-                  <h3 class="card-title">$34,245</h3>
-                </div>
-                <div class="card-footer">
-                  <div class="stats">
-                    <i class="material-icons">Mudar as cores</i> Mudar as cores
-                  </div>
-                </div>
-              </div>
-            </div>
+		<br>
 		<div class="col-md-12">
 			<div class="card">
 				<!-- <img src="" alt="" style=""> -->
 				<div class="container">
-					<h4><b>John Doe</b></h4>
-					<p>Architect & Engineer</p>
+					<h4><b>Livros cadastrados:</b></h4>
+					<p>Total: <?php echo $total1['total1']?></p>
 				</div>
 			</div>
 			<div class="card">
 				<!-- <img src="img_avatar.png" alt="Avatar" style="width:100%"> -->
 				<div class="container">
-					<h4><b>John Doe</b></h4>
-					<p>Architect & Engineer</p>
+					<h4><b>Cupom cadastrados</b></h4>
+					<p>Total: <?php echo $total2['total2']?></p>
 				</div>
 			</div>
 			<div class="card">
 				<!-- <img src="img_avatar.png" alt="Avatar" style="width:100%"> -->
 				<div class="container">
-					<h4><b>John Doe</b></h4>
-					<p>Architect & Engineer</p>
+					<h4><b>Pedidos:</b></h4>
+					<p>Totais: <?php echo $total3['total3']?></p>
 				</div>
 			</div>
 		</div>
