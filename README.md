@@ -13,7 +13,7 @@ O Projeto está em PHP + MYSQL;
 Para acessar a area administrativa é 'Ex. localhost/trabalhenategra/adm'
 
 Para a área administrativa use:
-Email: adm@adm.com
+Email: adm@tegra.com
 Senha: 123
 
 ## Getting started
@@ -59,7 +59,7 @@ O projeto está desenvolvimento em duas partes:
 [Para ver este projeto no ar na area administrativa](https://madebyguilherme.com/trabalhenategra/adm)
 
 Para a área administrativa usa:
-Email: adm@adm.com
+Email: adm@tegra.com
 Senha: 123
 
 
