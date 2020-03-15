@@ -10,6 +10,12 @@ Este projeto foi desenvolvimento em duas áreas distintas com mais explicações
 
 O Projeto está em PHP + MYSQL;
 
+Para acessar a area administrativa é 'Ex. localhost/trabalhenategra/adm'
+
+Para a área administrativa use:
+Email: adm@adm.com
+Senha: 123
+
 ## Getting started
 
 Este projeto foi testado e construido em PHP + SQL, então para testar está versão é recomendável utilizar o XAMPP,
@@ -43,6 +49,12 @@ O projeto está desenvolvimento em duas partes:
 ## Links
 
 [Para ver este projeto no ar](https://madebyguilherme.com/trabalhenategra)
+[Para ver este projeto no ar na area administrativa](https://madebyguilherme.com/trabalhenategra/adm)
+
+Para a área administrativa usa:
+Email: adm@adm.com
+Senha: 123
+
 
 
 
