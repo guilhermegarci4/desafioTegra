@@ -34,6 +34,13 @@ cd "diretoria de sua preferencia"
 git clone https://github.com/guilhermegarci4/desafioTegra.git
 ```
 
+```
+Acesse os arquivos para mudar as configurações de conexão do banco de dados:
+
+/php/conecta.php
+/adm/php/conecta.php
+```
+
 ## Construção
 
 Para começar a testar o projeto é necessário colocar o arquivo trabalhenategra.sql que está dentro da pasta banco de dados e importar para o seu banco de dados. E após isso é so 'startar' seu servidor php dentro do seu diretório.
