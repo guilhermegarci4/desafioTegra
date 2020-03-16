@@ -4,7 +4,7 @@ By Guilherme Garcia - [Portfolio](https://madebyguilherme.com)
 
 Meu email para dúvidas: guillherme966@gmail.com
 
-Desafafo para o programa de estágio na Tegra 2020.
+Desáfio para o programa de estágio na Tegra 2020.
 
 Este projeto foi desenvolvimento em duas áreas distintas com mais explicações abaixo, uma área com a logica do carrinho de compras e a outra para o administrador poder adicionar, editar e remover os livros que serão exibidos.
 

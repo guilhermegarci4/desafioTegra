@@ -1,9 +1,8 @@
 <?php 
     session_start();
-    
+    include 'conecta.php';
     foreach($_SESSION['dados'] as $livros)
     {
-        $conexaoPDO = new PDO('mysql:host=localhost;dbname=trabalhenategra',"root","");
         $insert = $conexaoPDO->prepare("
         INSERT INTO tbl_pedidos () VALUES (NULL, ?, ?, ?, ?) ");
         $insert->bindParam(1, $livros['id_livro']);
