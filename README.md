@@ -4,11 +4,17 @@ By Guilherme Garcia - [Portfolio](https://madebyguilherme.com)
 
 Meu email para dúvidas: guillherme966@gmail.com
 
-Desáfio para o programa de estágio na Tegra 2020.
+Desafío para o programa de estágio na Tegra 2020.
 
 Este projeto foi desenvolvimento em duas áreas distintas com mais explicações abaixo, uma área com a logica do carrinho de compras e a outra para o administrador poder adicionar, editar e remover os livros que serão exibidos.
 
 O Projeto está em PHP + MYSQL;
+
+Para acessar a area administrativa é 'Ex. localhost/trabalhenategra/adm'
+
+Para a área administrativa use:
+Email: adm@tegra.com
+Senha: 123
 
 ## Getting started
 
@@ -28,6 +34,13 @@ cd "diretoria de sua preferencia"
 git clone https://github.com/guilhermegarci4/desafioTegra.git
 ```
 
+```
+Acesse os arquivos para mudar as configurações de conexão do banco de dados:
+
+/php/conecta.php
+/adm/php/conecta.php
+```
+
 ## Construção
 
 Para começar a testar o projeto é necessário colocar o arquivo trabalhenategra.sql que está dentro da pasta banco de dados e importar para o seu banco de dados. E após isso é so 'startar' seu servidor php dentro do seu diretório.
@@ -43,6 +56,11 @@ O projeto está desenvolvimento em duas partes:
 ## Links
 
 [Para ver este projeto no ar](https://madebyguilherme.com/trabalhenategra)
+[Para ver este projeto no ar na area administrativa](https://madebyguilherme.com/trabalhenategra/adm)
+
+Para a área administrativa usa:
+Email: adm@tegra.com
+Senha: 123
 
 
 
