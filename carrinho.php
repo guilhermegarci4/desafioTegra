@@ -78,7 +78,7 @@ if(count($_SESSION['itens']) == 0) {
 							$select->bindParam(1, $idLivro);
 							$select->execute();
 							$MostrarLivros = $select->fetchAll();
-							$total = $quantidade * $MostrarLivros[0]["preco"];
+							$total = $quantidade * (int)$MostrarLivros[0]["preco"];
 					?>
 						<tr>
 							<td class="cart_product">
